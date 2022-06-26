@@ -76,6 +76,9 @@ class LogAndSing {
                     console.log("Geçersiz E-Posta"); // İsteğimiz Bitti
                     mail_hata.textContent = "Geçersiz e-mail !";
                 }
+                else if (errorMessage.error.message == "EMAIL_NOT_FOUND") {
+                    mail_hata.textContent = "Girdiğiniz e-mail sistemde bulunamadı !";
+                }
                 else if (errorMessage.error.message == "INVALID_PASSWORD") {
                     sifre_hata.textContent = "Geçersiz veya Hatalı şifre !";
                 }
@@ -86,7 +89,7 @@ class LogAndSing {
                     sifre_hata.textContent = "Şifreniz en az 6 karakterli olmalıdır !";
                 }
 
-
+                
             }
         }
 
